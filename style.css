@@ -1,0 +1,87 @@
+body {
+    background: linear-gradient(135deg, #ffd6e8, #ffeef6);
+    font-family: 'Comic Sans MS', cursive;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container {
+    background: #fff0f6;
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+    width: 320px;
+    box-shadow: 0 0 20px #ffb3d9;
+    animation: pop 1s ease;
+}
+
+@keyframes pop {
+    0% { transform: scale(0); }
+    100% { transform: scale(1); }
+}
+
+.judul {
+    color: #ff4d88;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 5px #ff99bb; }
+    to { text-shadow: 0 0 15px #ff4d88; }
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    background: #ffe6f0;
+}
+
+button {
+    background: #ff66a3;
+    border: none;
+    color: white;
+    padding: 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+}
+
+#hasil {
+    margin-top: 15px;
+    color: #ff3385;
+    font-size: 20px;
+    animation: fade 1s ease;
+}
+
+@keyframes fade {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Hati jatuh */
+.hearts span {
+    position: fixed;
+    top: -10px;
+    font-size: 20px;
+    animation: jatuh linear infinite;
+}
+
+@keyframes jatuh {
+    to {
+        transform: translateY(110vh);
+        opacity: 0;
+    }
